@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Control</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+
+        .button {
+            padding: 15px 30px;
+            font-size: 18px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #lunar-client {
+            background-color: #3498db;
+        }
+
+        #feather-client {
+            background-color: #2ecc71;
+        }
+
+        #vsc {
+            background-color: #34495e;
+        }
+
+        #client-info {
+            margin-top: 30px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Client Control</h1>
+
+    <div class="button-container">
+        <button id="lunar-client" class="button" onclick="buttonClicked('lunarclient')">Lunar Client</button>
+        <button id="feather-client" class="button" onclick="buttonClicked('featherclient')">Feather Client</button>
+        <button id="vsc" class="button" onclick="buttonClicked('vsc')">Visual Studio Code</button>
+    </div>
+
+    <div id="client-info"></div>
+
+    <script>
+        function buttonClicked(client) {
+            // Update the content on the website with the selected client
+            const clientInfoElement = document.getElementById('client-info');
+            clientInfoElement.textContent = `Selected Client: ${client}`;
+
+            // Update the JSON object with the selected client
+            const clientInfo = {
+                selectedClient: client
+            };
+
+            // You can send the JSON object to the server or perform any other desired action.
+            console.log("Client info updated:", clientInfo);
+        }
+    </script>
+</body>
+</html>
