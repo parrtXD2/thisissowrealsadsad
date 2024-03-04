@@ -70,6 +70,10 @@
                 selectedClient: client
             };
 
+            // Navigate to the new URL (modify the URL as needed)
+            const newURL = window.location.href + '/client';
+            window.location.href = newURL;
+
             // You can send the JSON object to the server or perform any other desired action.
             console.log("Client info updated:", clientInfo);
         }
